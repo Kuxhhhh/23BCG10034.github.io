@@ -5,99 +5,142 @@
     <title>My Gaming Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        /* ===== GLOBAL ===== */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #050816;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #050816, #0a0f2d);
             color: #f5f5f5;
         }
+
+        /* ===== HEADER ===== */
         header {
-            background: #0f172a;
-            padding: 20px;
+            background: rgba(10, 20, 40, 0.7);
+            padding: 40px 20px;
             text-align: center;
             border-bottom: 2px solid #22c55e;
+            box-shadow: 0 0 20px #22c55e20;
+            backdrop-filter: blur(6px);
         }
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.6rem;
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px #22c55e;
         }
         header p {
-            margin: 5px 0 0;
-            color: #9ca3af;
+            margin-top: 8px;
+            color: #a3ffa3;
+            font-size: 1.1rem;
         }
+
+        /* ===== MAIN CONTENT ===== */
         main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 15px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            border-left: 4px solid #22c55e;
-            padding-left: 10px;
-        }
-        .game-card {
-            background: #0b1120;
-            padding: 20px;
+            font-size: 1.8rem;
             margin-bottom: 20px;
-            border-radius: 10px;
-            border: 1px solid #1f2937;
+            border-left: 5px solid #22c55e;
+            padding-left: 15px;
+            text-shadow: 0 0 8px #22c55e40;
         }
+
+        /* ===== GAME CARD ===== */
+        .game-card {
+            background: rgba(15, 25, 50, 0.6);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            border: 1px solid #1f2937;
+            box-shadow: 0 0 15px #22c55e15;
+            backdrop-filter: blur(4px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 25px #22c55e30;
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #22c55e30;
+        }
+
         .game-card h3 {
             margin-top: 0;
+            font-size: 1.5rem;
         }
+
+        /* ===== BUTTON ===== */
         .btn {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 18px;
+            padding: 12px 22px;
             border-radius: 999px;
             background: #22c55e;
             color: #050816;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 0 10px #22c55e80;
+            transition: 0.2s;
         }
         .btn:hover {
             filter: brightness(1.1);
+            box-shadow: 0 0 16px #22c55e;
         }
+
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #6b7280;
+            padding: 25px;
+            font-size: 0.95rem;
+            color: #9ca3af;
+            border-top: 1px solid #1f2937;
+            margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>My Gaming Portal</h1>
-        <p>Play my cloud-hosted games and projects</p>
+        <p>Play cloud-hosted games — fast, free, and fun.</p>
     </header>
 
     <main>
+        <!-- Featured Game -->
         <section>
             <h2 class="section-title">Featured Game</h2>
+
             <div class="game-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Placeholder_game.png" alt="Game Thumbnail">
+
                 <h3>Cloud Game #1</h3>
                 <p>
-                    A simple browser-based game hosted using a cloud platform.
-                    Click the button below to play as a guest.
+                    A browser-based game developed in Unity and hosted on a cloud platform.  
+                    Click below to start playing instantly!
                 </p>
-              
+
                 <a class="btn" href="https://gd.games/games/4ecd8fe7-ed18-444d-93b3-7f6216815194" target="_blank">▶ Play Now</a>
             </div>
         </section>
 
+        <!-- About Portal -->
         <section>
             <h2 class="section-title">About This Portal</h2>
             <p>
-                This website is created as part of my coursework Gaming in cloud. It is hosted on GitHub Pages.
-                The game above is developed using a cloud service platform and can be accessed as a guest.
+                This website was created for my coursework <strong>Gaming in Cloud</strong>.  
+                It is hosted using GitHub Pages, and the games featured here run entirely on cloud platforms—no installation required.
             </p>
         </section>
     </main>
 
     <footer>
-        © 2025 My Gaming Portal
+        © 2025 My Gaming Portal — All Rights Reserved
     </footer>
 </body>
 </html>
